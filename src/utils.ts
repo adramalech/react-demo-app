@@ -1,8 +1,14 @@
-export const isDevelopmentEnvironment = (): boolean => process.env.NODE_ENV === 'development';
+export const isDevelopmentEnvironment = (): boolean => {
+  return process.env.NODE_ENV === 'development';
+};
 
-export const isProductionEnvironment = (): boolean => process.env.NODE_ENV === 'production';
+export const isProductionEnvironment = (): boolean => {
+  return process.env.NODE_ENV === 'production';
+};
 
-export const isTestEnvironment = (): boolean => process.env.NODE_ENV === 'test';
+export const isTestEnvironment = (): boolean => {
+  return process.env.NODE_ENV === 'test';
+};
 
 export const isMobileDevice = (): boolean => {
   const mobileUserAgentRegex = new RegExp(
