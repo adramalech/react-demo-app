@@ -10,9 +10,9 @@
     "not op_mob 59"
   ],
   "scripts": {
-    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "lint:verbose": "tsc && eslint '*/**/*.{js,ts,tsx}' --fix",
-    "prettier-format": "prettier --config .prettierrc '*/**/*.{js,ts,tsx}' --write",
+    "lint": "tsc --noEmit && eslint \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" --quiet --fix",
+    "lint:verbose": "tsc && eslint \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" --fix",
+    "prettier-format": "prettier --config .prettierrc \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" --write",
     "start": "parcel ./src/index.html",
     "watch": "parcel watch src/index.html --public-url ./",
     "dev": "npm run build:develop",
