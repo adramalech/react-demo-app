@@ -22,9 +22,6 @@
     "test": "jest --watch",
     "audit": "npm audit --registry='https://registry.npmjs.org/'"
   },
-  "jest": {
-    "setupTestFrameworkScriptFile": "./src/setupTests.js"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
