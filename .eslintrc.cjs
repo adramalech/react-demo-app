@@ -52,7 +52,7 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'error',
     'react-refresh/only-export-components': [ 'warn', { allowConstantExport: true } ],
-    'prettier/prettier': 'error',
+    "prettier/prettier": ['error', { 'singleQuote': false }],
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline']
   },
   settings: {
