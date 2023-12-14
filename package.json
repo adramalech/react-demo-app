@@ -52,6 +52,7 @@
     "react-device-detect": "^2.2.3"
   },
   "devDependencies": {
+    "ts-jest": "^29.1.1",
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
@@ -87,5 +88,30 @@
     "process": "^0.11.10",
     "supertest": "^6.3.3",
     "typescript": "^5.3.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "verbose": true,
+    "automock": true,
+    "rootDir": "src",
+    "collectCoverageFrom": [
+      "**/*.(ts|tsx|js|jsx)"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js|jsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "jsdom",
+    "testEnvironmentOptions": {
+      "customExportConditions": ["browser"]
+    }
   }
 }
