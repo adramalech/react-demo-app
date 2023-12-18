@@ -2,6 +2,7 @@
 const config: import("prettier").Config = {
   printWidth: 160,
   jsxBracketSameLine: true,
+  jsxSingleQuote: true,
   bracketSpacing: true,
   tabWidth: 4,
   semi: true,

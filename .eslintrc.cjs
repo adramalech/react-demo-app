@@ -12,7 +12,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:import/recommended',
-    "plugin:import/typescript",
+    'plugin:import/typescript',
     'plugin:unicorn/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:json/recommended',
@@ -20,8 +20,6 @@ module.exports = {
     'plugin:yml/standard'
   ],
   parserOptions: {
-    project: ['./tsconfig.json'],
-    tsconfigRootDir: './',
     ecmaVersion: 'latest', // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
     ecmaFeatures: {
@@ -32,9 +30,7 @@ module.exports = {
   ignorePatterns: [
     'dist', 
     '.eslintrc.cjs',
-    'prettierrc.mts',
-    'vite.config.ts',
-    './src/vite-environment.d.ts'
+    'prettierrc.mts'
   ],
   parser: '@typescript-eslint/parser',
   plugins: [
@@ -47,12 +43,25 @@ module.exports = {
     'jsx-a11y',
     'json',
     'markdown',
-    "jest"
+    'jest'
   ],
   rules: {
+    'no-duplicate-imports': 'error',
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        'max': 1,
+        'maxEOF': 0,
+        'maxBOF': 0
+      }
+    ],
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-unassigned-import': 'error',
     'import/no-unresolved': 'error',
     'react-refresh/only-export-components': [ 'warn', { allowConstantExport: true } ],
-    "prettier/prettier": ['error', { 'singleQuote': false }],
+    'prettier/prettier': ['error', { 'singleQuote': false }],
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline']
   },
   settings: {
