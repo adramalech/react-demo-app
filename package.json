@@ -14,13 +14,11 @@
   "lint-staged": {
     "src/**/*.(ts|tsx|js|jsx|cjs|mts|mts)": [
       "prettier --config .prettierrc.js --write",
-      "eslint './src/**' --ext .js,.jsx,.ts,.tsx,.mts,.cjs,.mjs -c .eslintrc.mjs --report-unused-disable-directives --fix --quiet",
-      "git add"
+      "eslint './src/**' --ext .js,.jsx,.ts,.tsx,.mts,.cjs,.mjs -c .eslintrc.mjs --report-unused-disable-directives --fix --quiet"
     ],
     "src/**/*.(json|css|md)": [
       "prettier --config .prettierrc.js --write",
-      "eslint './src/**' --ext .json,.css,.md -c .eslintrc.mjs --report-unused-disable-directives --fix --quiet",
-      "git add"
+      "eslint './src/**' --ext .json,.css,.md -c .eslintrc.mjs --report-unused-disable-directives --fix --quiet"
     ]
   },
   "husky": {
