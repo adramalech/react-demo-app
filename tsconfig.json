@@ -1,22 +1,7 @@
 {
-  "compilerOptions": {
-    "module": "ES2022",
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
-    "target": "ES2022",
-    "moduleResolution": "Bundler",
-    "jsx": "react-jsx",
-    "useDefineForClassFields": true,
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "composite": true,
-  },
-  "include": ["src"],
-  "exclude": ["node_modules"],
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
